@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static java.util.Map.Entry.comparingByValue;
-
 public class MakeHistogram {
     public void output(List<String> words) {
         MakeHistogram mh = new MakeHistogram();
@@ -27,21 +25,15 @@ public class MakeHistogram {
     }
 
     public void histogramOutput(Map<String, Integer> map) {
-        //  make a set for every word in the map
-        SortedSet<String> temp = new TreeSet<String>(map.keySet());
+        //  for every entry in the map - run this
+        for(Map.Entry<String, Integer> string : map.entrySet()) {
+            System.out.printf("%-10s", string.getKey() + ":");
 
-        //  make blank string
-        //  iterate the temp set
-        for(String key : temp) {
-            String a = "";
-            //  print word
-            System.out.printf("%-10s", key + ":");
-
-            //  print the amount of asterisks from map.get
-            for(int i = 0; i < map.get(key); i++) {
-                a += "*";
+            //  prints how many times it shows up in the array
+            for(int i = 0; i < map.get(string.getKey()); i++) {
+                System.out.print("*");
             }
-            System.out.println(a);
+            System.out.println();
         }
     }
 
