@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Solution {
+
+}
+
+class exercise46_input {
+    badger badger\nmushroom snake snake
+}
+
+class FindWords {
+    readInput()
+    wordsToList()
+}
+
+class MakeHistogram {
+    output()
+    histogramOutput()
+    sortMapDescending()
+    makeMap()
+    countFreq()
+    countUnique()
+}
+
+class output {
+    badger: **\nsnake: **\nmushroom: *
+}
+
+exercise46_input->Solution: reads input with FindWords
+Solution-[#blue]>MakeHistogram: makes Histogram
+Solution->FindWords: reads input
+FindWords-[#blue]>Solution: returns a list of words
+MakeHistogram-[#blue]->output: histogramOutput()
+
+
+@enduml
