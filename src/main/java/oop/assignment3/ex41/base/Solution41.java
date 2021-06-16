@@ -84,7 +84,6 @@ public class Solution41 {
         output.close();
     }
 
-
     public static List<String> sortNames(List<String> names) {
         //  uses the collections sort method to sort the list alphabetically
         Collections.sort(names);

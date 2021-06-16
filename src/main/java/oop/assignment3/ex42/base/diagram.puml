@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class csvReader {
+    output()
+}
+
+class exercise42_input {
+    Hello, Test, Hi
+    Water, Earth, Fire
+}
+
+class TerminalOutput {
+    Hello   Test    Hi
+    Water   Earth   Fire
+}
+
+exercise42_input->csvReader: csvReader reads the\n file and inserts the words\nseparated by commas in an array
+csvReader->TerminalOutput: output()
+@enduml

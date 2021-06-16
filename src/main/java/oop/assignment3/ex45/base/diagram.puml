@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class exercise45_input {
+    "Has the word "utilizes""
+}
+
+class Solution {
+    readOutputName()
+}
+
+class WordReplacer {
+    "utilizes"->"uses"
+}
+
+class outputName {
+    "Has the word "uses"""
+}
+
+exercise45_input->Solution
+Solution->WordReplacer: reads in the input to a string
+Solution->outputName: prompts for the output name
+WordReplacer->outputName: replaces the words\ngiven to the output file
+
+@enduml
