@@ -1,32 +1,6 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-class Solution43 {
-    readSiteName()
-    readAuthor()
-    createJS()
-    createCSS()
-}
-
-class CreateFolders {
-    createSiteFolder()
-    createJSFolder()
-    createCSSFolder()
-}
-
-class createHTMLFile {
-    createFile()
-}
-
-class userInput {
-    String SiteName
-    String authorName
-    boolean createJS
-    boolean createCSS
-}
-
-class folders {
-}
 
 userInput->Solution43: Solution takes in user input\nand reads in necessary info
 Solution43->CreateFolders: calls these functions\nwith user input

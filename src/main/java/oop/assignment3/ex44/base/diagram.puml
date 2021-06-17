@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+exercise44_input->jsonExtractor: deserializes json and makes\nlist of objects
+jsonExtractor->Solution: makes list
+Solution->DataChecker: reads in input and checks if\ninput is in the list
+DataChecker-[#blue]>Solution: calls output() with info from\nDataChecker
+Solution-[#blue]>output: prints object info
+@enduml

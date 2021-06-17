@@ -1,23 +1,6 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-class exercise42_input {
-    Ling, Mai
-    Johnson, Jim
-    Zarnecki, Sabrina
-}
-
-class Solution {
-    scanNames()
-    sortNames()
-    output()
-}
-
-class exercise42_output {
-    Johnson, Jim
-    Ling, Mai
-    Zarnecki, Sabrina
-}
 
 exercise42_input->Solution: scanNames()\nsortNames()
 Solution->exercise42_output: output()
