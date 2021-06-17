@@ -37,9 +37,60 @@ Implement this as a web application that provides the specified site as a zip fi
 
 package oop.assignment3.ex43.base;
 
+import java.util.Scanner;
+
 public class Solution43 {
+    Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution43 solution = new Solution43();
+        CreateFolders cf = new CreateFolders();
 
+        //  prompt for site name
+        String siteName = solution.readSiteName();
+
+        //  prompt for author name
+        String author = solution.readAuthor();
+
+        //  ask user if they want to create folder for javascript with boolean
+        boolean javascript = solution.createJS();
+
+        //  ask user if they want to create folder for CSS  with boolean
+        boolean css = solution.createCSS();
+
+        //  create necessary folders
+        cf.create(siteName, author, javascript, css);
+    }
+
+    public boolean createCSS() {
+        System.out.print("Do you want a folder for CSS? ");
+        String input = in.nextLine();
+        if(input.equals("y")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean createJS() {
+        System.out.print("Do you want a folder for JavaScript? ");
+        String input = in.nextLine();
+        if(input.equals("y")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String readAuthor() {
+        System.out.print("Author: ");
+        String author = in.nextLine();
+        return author;
+    }
+
+    public String readSiteName() {
+        System.out.print("Site name: ");
+        String siteName = in.nextLine();
+        return siteName;
     }
 }
