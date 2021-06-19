@@ -58,7 +58,7 @@ public class Solution41 {
         File input = new File("src/main/java/oop/assignment3/ex41/base/exercise41_input.txt");
 
         //  create a new output
-        FileWriter output = new FileWriter("src/main/java/oop/assignment3/ex41/base/exercise41_output.txt");
+        FileWriter output = new FileWriter("outputs/exercise41_output.txt");
 
         //  create a list of strings from the names from input
         List<String> names = Solution41.scanNames(input);

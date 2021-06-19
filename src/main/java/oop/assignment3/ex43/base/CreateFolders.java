@@ -20,7 +20,7 @@ public class CreateFolders {
     public void createCSSFolder(String siteName, boolean css) {
         //  if user inputted "y" it will make the file, if not, it won't do anything
         if(css) {
-            String dir = "src/main/java/oop/assignment3/ex43/base/website/" + siteName + "/css";
+            String dir = "outputs/website/" + siteName + "/css";
             File folder = new File(dir);
 
             folder.mkdirs();
@@ -31,7 +31,7 @@ public class CreateFolders {
     public void createJSFolder(String siteName, boolean javascript) {
         //  if user inputted "y" it will make the file, if not, it won't do anything
         if(javascript) {
-            String dir = "src/main/java/oop/assignment3/ex43/base/website/" + siteName + "/js";
+            String dir = "outputs/website/" + siteName + "/js";
             File folder = new File(dir);
 
             folder.mkdirs();
@@ -42,7 +42,7 @@ public class CreateFolders {
 
     public void createSiteFolder(String siteName) {
         //  makes folder with inputted siteName
-        String dir = "src/main/java/oop/assignment3/ex43/base/website/" + siteName;
+        String dir = "outputs/website/" + siteName;
         File folder = new File(dir);
 
         folder.mkdirs();

@@ -58,7 +58,7 @@ public class Solution45 {
         //  prompt for output name
         String outputName = solution.readOutputName();
         //  create a new output with the name inputted
-        FileWriter output = new FileWriter("src/main/java/oop/assignment3/ex45/base/" + outputName + ".txt");
+        FileWriter output = new FileWriter("outputs/" + outputName + ".txt");
 
         //  read in input
         String text = wr.readInput(input);

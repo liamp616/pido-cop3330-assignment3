@@ -10,7 +10,7 @@ public class createHTMLFile {
         String html = "<html lang = \"en\">\n<head>\n\t<meta charset=\"utf-8\">\n\n\t<title>" + siteName + "</title>\n\t<meta name= \"author\" content=\""
                 + author + "\">\n\n</head>\n" + "<body>\n</body>\n</html>";
 
-        File index = new File("src/main/java/oop/assignment3/ex43/base/website/" + siteName + "/index.html");
+        File index = new File("outputs/website/" + siteName + "/index.html");
 
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(index));
